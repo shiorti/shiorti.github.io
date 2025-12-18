@@ -73,49 +73,29 @@
             padding: 4rem 2rem;
         }
 
-        /* ===== New Hero Parallax Section ===== */
-        .hero-parallax {
-            position: relative;
-            height: 70vh;
-            background-image: url('images/IMG_8421.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .hero {
             text-align: center;
-            overflow: hidden;
-        }
-
-        .hero-parallax::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(4px);
-        }
-
-        .hero-overlay {
-            position: relative;
-            color: #fff;
+            padding: 5rem 2rem;
             max-width: 800px;
-            padding: 0 2rem;
+            margin: 0 auto 6rem auto;
         }
 
-        .hero-overlay h2 {
+        .hero h2 {
             font-size: 2.5rem;
+            font-weight: 300;
             letter-spacing: 2px;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            color: #2a2a2a;
         }
 
-        .hero-overlay p {
-            font-size: 1.1rem;
+        .hero p {
+            font-size: 1rem;
             line-height: 1.8;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
         }
 
-        /* ===== Existing Gallery, Story, Info, Contact Styles ===== */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -157,11 +137,100 @@
             letter-spacing: 0.5px;
         }
 
-        .story, .info-boxes, .contact {
+        .story {
             max-width: 800px;
             margin: 0 auto 6rem auto;
             padding: 4rem 2rem;
             text-align: center;
+        }
+
+        .story h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 2.5rem;
+            color: #2a2a2a;
+        }
+
+        .story p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .info-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 6rem;
+        }
+
+        .info-box {
+            text-align: center;
+            padding: 3rem 2rem;
+            border: 1px solid #e8e8e8;
+        }
+
+        .info-box h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: #2a2a2a;
+        }
+
+        .info-box p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .info-box .note {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #999;
+            margin-top: 1rem;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .contact h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            color: #2a2a2a;
+        }
+
+        .contact p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .contact a {
+            color: #2a2a2a;
+            text-decoration: none;
+            border-bottom: 1px solid #2a2a2a;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact a:hover {
+            opacity: 0.6;
         }
 
         footer {
@@ -179,17 +248,13 @@
         }
 
         @media (max-width: 768px) {
-            .hero-parallax {
-                background-attachment: scroll;
-                height: 50vh;
+            h1 {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
             }
 
-            .hero-overlay h2 {
+            .hero h2 {
                 font-size: 1.8rem;
-            }
-
-            .hero-overlay p {
-                font-size: 1rem;
             }
 
             nav a {
@@ -225,19 +290,31 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- ===== New Hero Section ===== -->
-    <section class="hero-parallax">
-        <div class="hero-overlay">
-            <h2>Three Generations of Excellence</h2>
-            <p>Welcome to The Jewelry Box, where quality and beauty have been a family tradition since the 1920s. Every piece in our collection is selected with care, passion, and decades of expertise.</p>
-        </div>
-    </section>
+    <div class="hero">
+        <h2>Three Generations of Excellence</h2>
+        <p>Welcome to The Jewelry Box, where quality and beauty have been a family tradition since the 1920s. Every piece in our collection is selected with care, passion, and decades of expertise.</p>
+    </div>
 
     <div class="container">
-        <!-- ===== Gallery Section ===== -->
         <section class="gallery">
             <div class="gallery-item">
-                <img src="images/IMG_8447.jpg" alt="Redesigned Heirloom Jewelry">
+                <img src="images/IMG_8429.jpg" alt="Handmade Jewelry">
+                <div class="gallery-caption">
+                    <h4>Delicate Designs</h4>
+                    <p>14k Gold & Sterling Silver</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/IMG_8438.jpg" alt="Vintage Jewelry">
+                <div class="gallery-caption">
+                    <h4>Vintage Collection</h4>
+                    <p>Curated Antique Pieces</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/IMG_8447.jpg" alt="Redesigned Heirloon Jewelry">
                 <div class="gallery-caption">
                     <h4>Redesigned Heirloom jewelry</h4>
                     <p>Diamonds & Precious Stones</p>
@@ -269,33 +346,36 @@
             </div>
         </section>
 
-        <!-- ===== Story Section ===== -->
         <section id="story" class="story">
             <h3>Our Family History</h3>
-            <p>Our history begins with George Chiappa, the son of Italian immigrants from Lake Como, Italy...</p>
-            <p>Theresa has since taken the torch and carried on the family legacy of quality and beauty...</p>
-            <p>When I was just 12, my aunt introduced me to her world...</p>
-            <p>Together, we have taken our boutique shoppe online!</p>
+            
+            <p>Our history begins with George Chiappa, the son of Italian immigrants from Lake Como, Italy. Born and raised in New York in the 1920s, he made his mark in the jewelry and watch trade. When his firstborn daughter, Theresa Chiappa, showed interest in the trade, he was excited to pass along his knowledge and worked with her for the decades they had together until his passing in 1984.</p>
+            
+            <p>Theresa has since taken the torch and carried on the family legacy of quality and beauty. Her beautiful store in the hills of New Jersey has been a gem in the community for 40 years.</p>
+            
+            <p>When I was just 12, my aunt introduced me to her world. Throughout my teens, she trained me just as her father had trained her, and in my 20s, I moved from my home in Boulder, Colorado to be nearer to her and began getting involved in other aspects of the trade, working with antiques as well as diamonds and fine jewelry, honing my skills as a jeweler.</p>
+            
+            <p>Together, we have taken our boutique shoppe online! We hope to share our love of beautiful jewelry with you, and strive to provide superior customer service with pieces we can proudly stand behind.</p>
         </section>
 
-        <!-- ===== Info Boxes ===== -->
         <section id="handcrafted" class="info-boxes">
             <div class="info-box">
                 <h4>Handcrafted Jewelry</h4>
-                <p>Our beautifully crafted pieces feature semi-precious and precious stones, as well as Swarovski crystal...</p>
+                <p>Our beautifully crafted pieces feature semi-precious and precious stones, as well as Swarovski crystal. We work with sterling silver, 14k gold filled, 14k, 18k, and platinum.</p>
+                <p>All of our handmade pieces are lovingly made locally right here in the USA.</p>
             </div>
 
             <div id="vintage" class="info-box">
                 <h4>Vintage Collection</h4>
-                <p>Our curated vintage collection has been hand-picked and vetted by us personally...</p>
+                <p>Our curated vintage collection has been hand-picked and vetted by us personally, reflecting our eclectic, boho-chic-meets-classic-elegance style.</p>
+                <p>We hope to find these vintage treasures good homes with someone who loves them as much as we do!</p>
                 <p class="note">Please note that vintage and antique pieces might naturally show some wear due to their age.</p>
             </div>
         </section>
 
-        <!-- ===== Contact Section ===== -->
         <section id="contact" class="contact">
             <h3>Get In Touch</h3>
-            <p>We would love to hear from you! Whether you're looking for a specific piece...</p>
+            <p>We would love to hear from you! Whether you're looking for a specific piece, have questions about our collection, or want to share your thoughts, please reach out.</p>
             <p>Email us at <a href="mailto:Theresashiori@gmail.com">theresashiori@gmail.com</a></p>
             <p>We love to hear feedback! Please let us know what you think!</p>
         </section>
